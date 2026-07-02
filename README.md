@@ -1,10 +1,17 @@
 # Hello World API
 
+A simple Spring Boot REST API that returns a greeting message based on the first letter of the input name.
+
 ## Requirements
-Java 17
-Maven
+
+-Java 17
+-Maven
+
+---
 
 ## How to Run
+
+```bash
 mvn spring-boot:run
 
 ##App runs on:
@@ -25,3 +32,4 @@ mvn test
 Only first letter is validated
 Case-insensitive check
 Name is trimmed before processing
+```
