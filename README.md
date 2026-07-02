@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+
 # Hello World API
 
 A simple Spring Boot REST API that returns a greeting message based on the first letter of the input name.
