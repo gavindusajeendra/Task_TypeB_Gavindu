@@ -11,20 +11,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/hello-world")
 public class HelloWorldController {
+
     private final HelloWorldService service;
 
-    public HelloWorldController(HelloWorldService service){
+    public HelloWorldController(HelloWorldService service) {
         this.service = service;
     }
 
     @GetMapping
-    public ResponseEntity<?> hello(@RequestParam(required = false) String name){
-        Object response = service.processName(name);
-
-        if(response instanceof HelloWorldService.SuccessResponse){
-            return ResponseEntity.ok(response);
-        }
-
-        return ResponseEntity.badRequest().body(response);
+    public ResponseEntity<?> hello(@RequestParam(required = false) String name) {
+        return service.process(name);
     }
 }
